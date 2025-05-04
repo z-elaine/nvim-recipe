@@ -27,4 +27,5 @@ require("lazy").setup({
   -- install = { colorscheme = { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...} },
   -- automatically check for plugin updates
   checker = { enabled = true },
+  -- change_detection = { enabled = false },
 })
