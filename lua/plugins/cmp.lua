@@ -9,6 +9,7 @@ return {
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'saadparwaiz1/cmp_luasnip', 
+    'hrsh7th/cmp-nvim-lsp',
 
     -- snippet engine and snippet collections
     -- LuaSnip is a dependency of cmp_luasnip, friendly-snippets is a dependency of LuaSnip
@@ -124,6 +125,7 @@ return {
           vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
           -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
           vim_item.menu = ({
+            nvim_lsp = "[LSP]",
             luasnip = "[Snippet]",
             buffer = "[Buffer]",
             path = "[Path]",
@@ -132,6 +134,7 @@ return {
         end,
       },
       sources = {
+        { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
